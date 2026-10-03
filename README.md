@@ -10,9 +10,13 @@ I turn what people say they need into working AI tools, explain how they work in
 
 **[Local AI Assistant](https://github.com/nicholas-tamburrino/local-ai-assistant)**: a voice-first household assistant that runs on the user's own computer, with memory and written limits on what it will do.
 
+**[llm-behavior-eval](https://github.com/nicholas-tamburrino/llm-behavior-eval)**: a small Python toolkit for rule-based behavior tests of chat assistants (honesty, limits, formatting, repetition). Same reply, same score, and every failure is shown with the reply that caused it. Standard library only, with unit tests and CI.
+
+**[The Lamplighter's Log](https://github.com/nicholas-tamburrino/lamplighters-log)** ([play it](https://nicholas-tamburrino.github.io/lamplighters-log/)): a lighthouse mystery text adventure. The game engine owns the facts, an optional model can narrate, and a rule-based guard rejects model text that invents objects or exits. Tested with 18 unit tests and CI.
+
 ### How I test
 
-I wrote 48 fixed test cases for the assistant covering honesty, limits and crisis handling. It passes 43 of them. The tests found gaps in its safety rule, which I fixed and re-tested. The 5 that still fail are documented in the README.
+I wrote 48 fixed test cases for the assistant covering honesty, limits and crisis handling. It passes 43 of them. The tests found gaps in its safety rule, which I fixed and re-tested. The 5 that still fail are documented in the README. I then turned the approach into the reusable llm-behavior-eval toolkit above.
 
 ### Looking for
 
